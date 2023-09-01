@@ -6,8 +6,9 @@ metadata:
 spec:
   selector:
     app: nginx-app   # Use the appropriate label to match your pod
+  type: NodePort
   ports:
     - protocol: TCP
       port: 80       # Port in the service
       targetPort: 80 # Port in the pod
-  type: NodePort
+      nodePort: 30009
